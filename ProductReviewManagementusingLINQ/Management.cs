@@ -19,7 +19,20 @@ namespace ProductReviewManagementusingLINQ
             {
                 Console.WriteLine("ProductID: " + list.ProductId + " UserID : " + list.UserId + 
                     " Rating : " + list.Rating + " Review : " + list.Review + " isLike : " + list.isLike);
+            }
+        }
 
+        public void SpecificRecords(List<ProductReview> review)
+        {
+            var recordedData = from productReviews in review
+                               where (productReviews.ProductId == 1 || productReviews.ProductId == 4 || productReviews.ProductId == 9)
+                               && productReviews.Rating > 3
+                               select productReviews;
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID: " + list.ProductId + " UserID : " + list.UserId +
+                    " Rating : " + list.Rating + " Review : " + list.Review + " isLike : " + list.isLike);
             }
         }
     }
