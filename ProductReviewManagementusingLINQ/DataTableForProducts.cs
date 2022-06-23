@@ -32,7 +32,9 @@ namespace ProductReviewManagementusingLINQ
             table.Rows.Add("12", "1", "3", "Average", false);
 
             Management productManagement = new Management();
-            productManagement.RetrieveRecords(table);
+            //productManagement.RetrieveRecords(table);
+
+            productManagement.AverageRating(table);
         }
     }
 }

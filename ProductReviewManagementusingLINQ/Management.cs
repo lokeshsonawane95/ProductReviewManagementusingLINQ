@@ -75,5 +75,14 @@ namespace ProductReviewManagementusingLINQ
                     " Ratings : " + list.Field<string>("Ratings") + " Reviews : " + list.Field<string>("Reviews") + " isLike : " + list.Field<string>("isLike"));
             }
         }
+
+        public void AverageRating(DataTable table)
+        {
+            var recordData = table.AsEnumerable().GroupBy(r => r.Field<string>("userId")).Select(r => new { userid = r.Key, averageRatings = r.Average(x => Convert.ToInt32(x.Field<string>("ratings"))) });
+            foreach (var list in recordData)
+            {
+                Console.WriteLine("UserID : " + list.userid + " Ratings : " + list.averageRatings);
+            }
+        }
     }
 }

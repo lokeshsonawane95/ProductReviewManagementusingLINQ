@@ -56,9 +56,10 @@
             //LinqToDataTable linqToDataTable = new LinqToDataTable();
             //linqToDataTable.AddToDatatable();
 
-            // UC9
+            // UC9 and UC10
             DataTableForProducts dataTableForProducts = new DataTableForProducts();
             dataTableForProducts.AddDataTable();
+
         }
     }
 }
