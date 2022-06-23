@@ -34,7 +34,9 @@ namespace ProductReviewManagementusingLINQ
             Management productManagement = new Management();
             //productManagement.RetrieveRecords(table);
 
-            productManagement.AverageRating(table);
+            //productManagement.AverageRating(table);
+
+            productManagement.RetrieveSpecificMessage(table);
         }
     }
 }

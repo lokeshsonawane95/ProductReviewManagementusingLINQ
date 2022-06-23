@@ -84,5 +84,16 @@ namespace ProductReviewManagementusingLINQ
                 Console.WriteLine("UserID : " + list.userid + " Ratings : " + list.averageRatings);
             }
         }
+
+        public void RetrieveSpecificMessage(DataTable table)
+        {
+            var recordData = table.AsEnumerable().Where(r => r.Field<string>("reviews") == "Good");
+            foreach (var list in recordData)
+            {
+                //field datatype is string here for every column
+                Console.WriteLine("ProductId : " + list.Field<string>("ProductId") + " UserID : " + list.Field<string>("UserId") + " Ratings : " + list.Field<string>("Ratings") + " Reviews : " + list.Field<string>("Reviews") + " isLike : " + list.Field<string>("isLike"));
+            }
+
+        }
     }
 }
