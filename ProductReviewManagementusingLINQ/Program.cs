@@ -47,10 +47,14 @@
             //management.CountByRecords(productReviewList);
 
             // UC5 and UC7
-            management.RetrieveProductIDAndReview(productReviewList);
+            //management.RetrieveProductIDAndReview(productReviewList);
 
             // UC6
             //management.SkipRecords(productReviewList);
+
+            // UC8
+            LinqToDataTable linqToDataTable = new LinqToDataTable();
+            linqToDataTable.AddToDatatable();
         }
     }
 }
