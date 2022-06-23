@@ -1,6 +1,6 @@
 ﻿namespace ProductReviewManagementusingLINQ
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -36,11 +36,9 @@
 
             };
 
-            foreach (var list in productReviewList)
-            {
-                Console.WriteLine("ProductID: " + list.ProductId + " UserID : " + list.UserId + " Rating : " + list.Rating + " Review : " +list.Review + " isLike : " + list.isLike);
+            Management management = new Management();
 
-            }
+            management.TopRecords(productReviewList);
         }
     }
 }
