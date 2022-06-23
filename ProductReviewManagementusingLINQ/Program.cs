@@ -33,7 +33,6 @@
                 new ProductReview(){ProductId=23,UserId=15,Rating=4,Review="nice",isLike=true},
                 new ProductReview(){ProductId=24,UserId=12,Rating=2,Review="Bad",isLike=false},
                 new ProductReview(){ProductId=25,UserId=11,Rating=4,Review="nice",isLike=true},
-
             };
 
             Management management = new Management();
@@ -48,7 +47,10 @@
             //management.CountByRecords(productReviewList);
 
             // UC5
-            management.RetrieveProductIDAndReview(productReviewList);
+            //management.RetrieveProductIDAndReview(productReviewList);
+
+            // UC6
+            management.SkipRecords(productReviewList);
         }
     }
 }
