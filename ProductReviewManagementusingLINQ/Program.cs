@@ -46,11 +46,11 @@
             // UC4
             //management.CountByRecords(productReviewList);
 
-            // UC5
-            //management.RetrieveProductIDAndReview(productReviewList);
+            // UC5 and UC7
+            management.RetrieveProductIDAndReview(productReviewList);
 
             // UC6
-            management.SkipRecords(productReviewList);
+            //management.SkipRecords(productReviewList);
         }
     }
 }
