@@ -53,8 +53,12 @@
             //management.SkipRecords(productReviewList);
 
             // UC8
-            LinqToDataTable linqToDataTable = new LinqToDataTable();
-            linqToDataTable.AddToDatatable();
+            //LinqToDataTable linqToDataTable = new LinqToDataTable();
+            //linqToDataTable.AddToDatatable();
+
+            // UC9
+            DataTableForProducts dataTableForProducts = new DataTableForProducts();
+            dataTableForProducts.AddDataTable();
         }
     }
 }

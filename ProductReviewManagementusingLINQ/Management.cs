@@ -64,5 +64,16 @@ namespace ProductReviewManagementusingLINQ
                     " Rating : " + list.Rating + " Review : " + list.Review + " isLike : " + list.isLike);
             }
         }
+
+        public void RetrieveRecords(DataTable table)
+        {
+            var recordedData = from products in table.AsEnumerable() where (products.Field<string>("isLike") == true.ToString()) select products;
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID: " + list.Field<string>("ProductId") + " UserID : " + list.Field<string>("UserID") +
+                    " Ratings : " + list.Field<string>("Ratings") + " Reviews : " + list.Field<string>("Reviews") + " isLike : " + list.Field<string>("isLike"));
+            }
+        }
     }
 }
