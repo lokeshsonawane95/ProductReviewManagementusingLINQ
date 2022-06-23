@@ -90,10 +90,21 @@ namespace ProductReviewManagementusingLINQ
             var recordData = table.AsEnumerable().Where(r => r.Field<string>("reviews") == "Good");
             foreach (var list in recordData)
             {
-                //field datatype is string here for every column
                 Console.WriteLine("ProductId : " + list.Field<string>("ProductId") + " UserID : " + list.Field<string>("UserId") + " Ratings : " + list.Field<string>("Ratings") + " Reviews : " + list.Field<string>("Reviews") + " isLike : " + list.Field<string>("isLike"));
             }
+        }
 
+        public void RetrieveSpecificID(DataTable table)
+        {
+            var recordData = table.AsEnumerable().Where(r => Convert.ToInt32(r.Field<string>("UserID")) == 10).OrderBy(r => Convert.ToInt32(r.Field<string>("Ratings")));
+            var recordedData = from products in table.AsEnumerable()
+                               where Convert.ToInt32(products.Field<string>("UserID")) == 10
+                               orderby (Convert.ToInt32(products.Field<string>("Ratings")))
+                               select products;
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID : " + list.Field<string>("ProductId") + " UserID : " + list.Field<string>("UserID") + " Ratings : " + list.Field<string>("Ratings") + " Review : " + list.Field<string>("Reviews") + " isLike : " + list.Field<string>("isLike"));
+            }
         }
     }
 }

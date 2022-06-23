@@ -30,13 +30,24 @@ namespace ProductReviewManagementusingLINQ
             table.Rows.Add("10", "2", "2", "Bad", false);
             table.Rows.Add("11", "3", "3", "Average", true);
             table.Rows.Add("12", "1", "3", "Average", false);
+            table.Rows.Add("13", "10", "5", "Good", true);
+            table.Rows.Add("14", "10", "6", "Good", true);
+            table.Rows.Add("15", "10", "6", "Good", true);
+            table.Rows.Add("16", "10", "5", "Average", true);
+            table.Rows.Add("17", "10", "3", "Bad", true);
+            table.Rows.Add("18", "10", "1", "Bad", true);
+            table.Rows.Add("19", "10", "7", "Good", true);
+            table.Rows.Add("20", "10", "2", "Bad", true);
+            table.Rows.Add("21", "10", "9", "Good", true);
 
             Management productManagement = new Management();
             //productManagement.RetrieveRecords(table);
 
             //productManagement.AverageRating(table);
 
-            productManagement.RetrieveSpecificMessage(table);
+            //productManagement.RetrieveSpecificMessage(table);
+
+            productManagement.RetrieveSpecificID(table);
         }
     }
 }
