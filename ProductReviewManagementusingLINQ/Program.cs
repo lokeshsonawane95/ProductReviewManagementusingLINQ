@@ -42,7 +42,10 @@
             //management.TopRecords(productReviewList);
 
             // UC3
-            management.SpecificRecords(productReviewList);
+            //management.SpecificRecords(productReviewList);
+
+            //UC4
+            management.CountByRecords(productReviewList);
         }
     }
 }
